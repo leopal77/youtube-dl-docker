@@ -1,13 +1,9 @@
 FROM alpine
 
 # Uncomment to use proxy for accessing internet
-# RUN touch /etc/profile.d/env.sh
-# RUN echo 'export http_proxy=scheme://server:port' >> /etc/profile.d/env.sh
-# RUN echo 'export http_proxy=scheme://server:port' >> /etc/profile.d/env.sh
-# RUN source /etc/profile.d/env.sh \
-# && apk add --update nodejs-current \
+#ENV http_proxy=proxy_address
+#ENV https_proxy=proxy_address
 
-# Comment to use proxy for accessing internet
 RUN apk add --update nodejs-current \
 && apk add nodejs-npm \
 && set -x \
